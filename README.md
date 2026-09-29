@@ -4,7 +4,7 @@ This is my solution for the Enuygun DevOps Engineer case study. In this project,
 
 ## Architecture Diagram
 
-![Architecture Diagram](images/architecture.png)
+![Architecture Diagram](images/architecture.drawio.png)
 
 *(Note: The diagram shows the traffic flow and the cluster components.)*
 
