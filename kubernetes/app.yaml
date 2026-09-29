@@ -12,7 +12,6 @@ spec:
       labels:
         app: sample-app
     spec:
-      # İŞTE MADDE 3 BURASI: Uygulamayı sadece application-pool'a gönderiyoruz
       nodeSelector:
         pool: "application-pool"
       containers:
@@ -21,7 +20,6 @@ spec:
         ports:
         - containerPort: 80
         resources:
-          # HPA'nın CPU hesaplayabilmesi için request belirtmek ZORUNLUDUR
           requests:
             cpu: "100m"
 ---
@@ -37,7 +35,6 @@ spec:
       port: 80
       targetPort: 80
 ---
-# İŞTE MADDE 4 BURASI: HPA Kurulumu (%25 CPU, 1-5 Pod arası scale)
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
